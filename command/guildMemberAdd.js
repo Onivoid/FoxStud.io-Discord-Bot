@@ -7,7 +7,7 @@ const   Canvas = require('canvas'),
         roundedPicture = require('./utils/roundedPicture');
 
 module.exports = async (Discord, client, member) => {
-    const channel = member.guild.channels.find(ch => ch.name === process.env.WELCOME_CHANNEL);
+    const channel = member.guild.channels.find(ch => ch.id === process.env.WELCOME_CHANNEL);
     const avatarSize = 172;
     const canvasSize = {
         height: 333,
